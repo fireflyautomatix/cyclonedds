@@ -510,7 +510,7 @@ ddsrt_sendmsg(
     *sent = n;
     return DDS_RETCODE_OK;
   }
-  DDS_INFO("%s: errno=%d\n", __FUNCTION__, errno);
+  DDS_ERROR("%s: errno=%d\n", __FUNCTION__, errno);
   return send_error_to_retcode(errno);
 }
 
